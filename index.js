@@ -24,6 +24,7 @@ app.get('/api/hello', function (req, res) {
   res.json({ greeting: 'hello API' });
 });
 
+// Endpoint that returns data from headers
 app.get('/api/whoami', function (req, res) {
   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   var language = req.headers['accept-language'].split(',')[0];
